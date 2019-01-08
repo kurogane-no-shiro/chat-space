@@ -42,8 +42,8 @@ Things you may want to cover:
 |    column     |   type     |     options                   |
 |:--------------|------------|------------------------------:|
 | id            | integer    |                               |
-| name          | text       | null:false                    |
-| email         |  text      | null:false, add_index: true   |
+| name          | string     | null:false                    |
+| email         | string     | null:false, add_index: true   |
 | group_id      | integer    | null:false, foreign key: true |
 
 ### Association
@@ -54,8 +54,19 @@ Things you may want to cover:
 |    column     |   type     |     options                   |
 |:--------------|------------|------------------------------:|
 | id            | integer    |                               |
-| group_name    | text       | null:false                    |
+| name          | string     | null:false, add_index: true   |
 
 ### Association
 -has_and_belongs_to_many :users
 -has_many :massages
+
+##user_group table
+|    column     |   type     |     options                   |
+|:--------------|------------|------------------------------:|
+| user_id       | integer    | foreign key: true             |
+| group_id      | integer    | foreign key: true             |
+
+### Association
+-belongs_to :user
+-belongs_to :group
+
