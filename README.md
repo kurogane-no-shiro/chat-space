@@ -24,10 +24,9 @@ Things you may want to cover:
 * ... -->
 
 
-##message table
+## message table
 |    column     |   type     |     options                   |
 |:--------------|------------|------------------------------:|
-| id            | integer    |                               |
 | body          | text       |                               |
 | image         | string     |                               |
 | user_id       | integer    | null:false, foreign key: true |
@@ -38,10 +37,9 @@ Things you may want to cover:
 - belongs_to :user
 
 
-##user table
+## user table
 |    column     |   type     |     options                   |
 |:--------------|------------|------------------------------:|
-| id            | integer    |                               |
 | name          | string     | null:false                    |
 | email         | string     | null:false, add_index: true   |
 | group_id      | integer    | null:false, foreign key: true |
@@ -51,10 +49,9 @@ Things you may want to cover:
 -has_many :user_group
 -has_many :messages
 
-##group table
+## group table
 |    column     |   type     |     options                   |
 |:--------------|------------|------------------------------:|
-| id            | integer    |                               |
 | name          | string     | null:false, add_index: true   |
 
 ### Association
@@ -62,7 +59,7 @@ Things you may want to cover:
 -has_many :user_group
 -has_many :massages
 
-##user_group table
+## user_group table
 |    column     |   type     |     options                   |
 |:--------------|------------|------------------------------:|
 | user_id       | integer    | foreign key: true             |
