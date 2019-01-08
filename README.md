@@ -1,6 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
+<!-- This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
@@ -21,4 +21,41 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
+
+
+##message table
+|    column     |   type     |     options                   |
+|:--------------|------------|------------------------------:|
+| id            | integer    |                               |
+| body          | text       |                               |
+| image         | string     |                               |
+| user_id       | integer    | null:false, foreign key: true |
+| group_id      | integer    | null:false, foreign key: true |
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
+##user table
+|    column     |   type     |     options                   |
+|:--------------|------------|------------------------------:|
+| id            | integer    |                               |
+| name          | text       | null:false                    |
+| email         |  text      | null:false, add_index: true   |
+| group_id      | integer    | null:false, foreign key: true |
+
+### Association
+-has_and_belongs_to_many :groups
+-has_many :messages
+
+##group table
+|    column     |   type     |     options                   |
+|:--------------|------------|------------------------------:|
+| id            | integer    |                               |
+| group_name    | text       | null:false                    |
+
+### Association
+-has_and_belongs_to_many :users
+-has_many :massages
