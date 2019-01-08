@@ -42,7 +42,6 @@ Things you may want to cover:
 |:--------------|------------|------------------------------:|
 | name          | string     | null:false                    |
 | email         | string     | null:false, add_index: true   |
-| group_id      | integer    | null:false, foreign key: true |
 
 ### Association
 -has_many :groups, through: user_group
