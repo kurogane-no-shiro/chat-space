@@ -47,7 +47,8 @@ Things you may want to cover:
 | group_id      | integer    | null:false, foreign key: true |
 
 ### Association
--has_and_belongs_to_many :groups
+-has_many :groups, through: user_group
+-has_many :user_group
 -has_many :messages
 
 ##group table
@@ -57,7 +58,8 @@ Things you may want to cover:
 | name          | string     | null:false, add_index: true   |
 
 ### Association
--has_and_belongs_to_many :users
+-has_many :users, through:user_group
+-has_many :user_group
 -has_many :massages
 
 ##user_group table
