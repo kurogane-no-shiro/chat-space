@@ -1,0 +1,61 @@
+.header {
+  background-color:#253141;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 20px;
+}
+
+.groups {
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  width:300px;
+
+}
+
+
+.chat {
+  float:left;
+
+
+}
+.chat-header {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 0 40px;
+}
+.chat-contents {
+
+}
+
+
+.post-area {
+
+}
+
+h1, h2, h3, h4 {
+  color: white;
+  font-weight: bold;
+}
+
+
+
+
+// <div class="header">
+//   <h1>ヘッダー</h1>
+// </div>
+
+// <div class="groups">
+//   <h2>グループ名（複数）</h2>
+// </div>
+
+
+// <div class="chat">
+//   <div class="chat-header"></div>
+//   <div class="chat-contents"></div>
+//   <h4>投稿内容</h4>
+// </div>
+
+// <div class="post-area">
+//   <h4>投稿用エリア</h4>
+// </div>
