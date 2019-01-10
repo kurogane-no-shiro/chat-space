@@ -81,31 +81,32 @@
     </h3>
     <ul class='header__lists'>
       <li class='list'>
-        <a href="/groups/new"><i class="fa fa-pencil-square-o icon my_white"></i>
-        </a></li>
+        <%= link_to "", "/groups/new", :class => "fa fa-pencil-square-o icon my_white" %>
+        </li>
       <li class='list'>
-        <a href="/groups/new"><i class="fa fa-cog icon my_white"></i>
-        </a></li>
+        <%= link_to "", "/groups/new", :class => "fa fa-cog icon my_white" %>
+      </li>
    </ul>
   </div>
 
 <div class='groups'>
-<div class='group'>
-<a href="/groups/29732/messages"><div class='group__name'>
-俺
-</div>
+  <div class='group'>
+  <%link_to "俺", "messages", :class => "group__name" %>
+    <a href="/groups/29732/messages">
+      <div class='group__name'>
+        私
+      </div></a>
 <div class='group__message'>
 ぽぽぽぽん！！
 </div>
-</a></div>
+</div>
 <div class='group'>
 <a href="/groups/29742/messages"><div class='group__name'>
 わいわい
-</div>
+</div></a>
 <div class='group__message'>
 風呂が沸いたよ。入れば？
-</div>
-</a></div>
+</div></div>
 </div>
 
 </div>
@@ -124,9 +125,11 @@ kurochang
 </ul>
 </div>
 <div class='right-header'>
-<a class="right-header__button" href="/groups/29742/edit">Edit</a>
+  <a class="right-header__button" href="/groups/29742/edit">Edit</a>
 </div>
 </div>
+
+
 <div class='messages js-messages'>
 <div class='message'>
 <div class='upper-message'>

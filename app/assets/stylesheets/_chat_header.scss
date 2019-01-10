@@ -17,8 +17,13 @@ width: calc(100% - 300px);
             font-size: 20px;
             margin-top: 35px;
         }
-        .right-header {
-                border: 1px solid #38AEF0;
+      }
+  }
+}
+
+
+.right-header {
+  border: 1px solid #38AEF0;
                 color: #38AEF0;
                 float: right;
                 height: 40px;
@@ -28,8 +33,5 @@ width: calc(100% - 300px);
                 .right-header__button {
                     color: #38AEF0;
                     text-decoration: none;
-                }
-        }
-      }
-  }
+ }
 }
