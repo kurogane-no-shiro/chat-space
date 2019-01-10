@@ -6,6 +6,12 @@ width: calc(100% - 300px);
       padding: 0 40px;
       .left-header {
         float:left;
+        .left-header__members {
+          display: flex;
+          color: #999;
+          font-size: 12px;
+          margin-top: 15px;
+        }
         .left-header__title {
             color: #333;
             font-size: 20px;
