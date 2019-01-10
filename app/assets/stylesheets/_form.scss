@@ -1,0 +1,32 @@
+.form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    .form__message {
+        border: none;
+        box-sizing: border-box;
+        float: left;
+        height: 50px;
+        padding: 0 10px;
+        width: calc(100% - 150px);
+    }
+    .form__mask {
+        background-color: #fff;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        .form__mask__image {
+            font-size: 20px;
+            line-height: 50px;
+            .fa-picture-o {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+    }
+}
