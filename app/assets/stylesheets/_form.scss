@@ -3,6 +3,8 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
+    clear:both;
+    bottom:0;
     .form__message {
         border: none;
         box-sizing: border-box;
@@ -41,3 +43,8 @@
     margin-left: 15px;
     padding: 0 30px;
 }
+
+#message_image {
+    display:none;
+}
+
