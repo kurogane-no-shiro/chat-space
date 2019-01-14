@@ -1,7 +1,7 @@
 .wrapper
   .side-bar
     .side-header
-      %h3.header__name kurochang
+      .header__name kurochang
       %ul.header__lists
         %li.list
         = link_to "", "messages"
@@ -13,10 +13,10 @@
     .groups
       .group
         .group__name 俺
-        .group__massage ぽぽぽぽ〜ん！
+        .group__message ぽぽぽぽ〜ん！
       .group
         .group__name わいわい
-        .group__name 風呂沸いた。
+        .group__message 風呂沸いた。
 
   .chat
     .header
@@ -34,10 +34,9 @@
       .message
         .upper-message
           .upper-message__user-name kurochang
-          .upper-message__date 2019/01/09
+          .upper-message__date 2019/01/09 04:22:58
         .lower-message
-          .lower-message__content
-          今日はふりかけご飯
+          .lower-message__content 今日はふりかけご飯
 
     .form
       %input#message_content.form__message.js-content{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
