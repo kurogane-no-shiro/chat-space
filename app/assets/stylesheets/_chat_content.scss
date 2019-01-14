@@ -1,44 +1,44 @@
-$color:#434a54;
+@import "variable";
 
 .messages {
     background-color: #FAFAFA;
     box-sizing: border-box;
     height: calc(100vh - 100px - 90px);
     padding: 46px 40px 0;
-  }
+}
 
-    .message {
-      margin-bottom:40px;
+.message {
+    margin-bottom:40px;
+}
+
+.upper-message {
+    display: flex;
+    font-size:16px;
+    font-weight:bold;
+    color: $message-color;
+
+    &__user-name {
+        font-weight:bold;
+        display:inline-block;
     }
-
-      .upper-message {
-         display: flex;
-         font-size:16px;
-         font-weight:bold;
-         color: $color;
-
-          &__user-name {
-              font-weight:bold;
-              display:inline-block;
-            }
-          &__date {
-              padding:0 10px;
-              font-size:12px;
-              font-weight:normal;
-              color:#999999;
-              display:inline-block;
-          }
-        }
-      .lower-message {
-        margin-top:10px;
-
-      &__content {
-        font-size:14px;
-        color: $color;
-        margin-bottom:10px;
+    &__date {
+        padding:0 10px;
+        font-size:12px;
         font-weight:normal;
-      }
-      }
+        color:#999999;
+        display:inline-block;
+    }
+}
+
+.lower-message {
+    margin-top:10px;
+    &__content {
+    font-size:14px;
+    color: $message-color;
+    margin-bottom:10px;
+    font-weight:normal;
+    }
+}
 
 
 

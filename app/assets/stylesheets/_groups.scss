@@ -1,4 +1,4 @@
-$color:#fff;
+@import "variable";
 
 .groups {
     background-color: #2f3e51;
@@ -8,11 +8,11 @@ $color:#fff;
     box-sizing: border-box;
     padding: 20px 0 40px;
         &__name {
-            color: $color;
+            color: $white-color;
             font-size: 15px;
         }
         &__message {
-            color: $color;
+            color: $white-color;
             font-size: 11px;
             margin-top: 5px;
         }
