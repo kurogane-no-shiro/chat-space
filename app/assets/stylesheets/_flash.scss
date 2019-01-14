@@ -1,0 +1,10 @@
+.flash {
+  color:$white-color;
+  text-align:center;
+  &__alert {
+    background-color: $log_out_orange;
+  }
+  &__notice {
+    background-color: $log_in_blue;
+  }
+}
