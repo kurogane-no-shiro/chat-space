@@ -1,0 +1,48 @@
+.form {
+    background-color: #DDDDDD;
+    box-sizing: $form-box-size;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    &__message {
+        border: none;
+        box-sizing:$form-box-size;
+        float: left;
+        height: 50px;
+        padding: 0 10px;
+        width: calc(100% - 150px);
+    }
+        &__mask {
+            background-color: $white-color;
+            float: left;
+            height: 50px;
+            padding-right: 10px;
+            &__image {
+                font-size: 20px;
+                line-height: 50px;
+            }
+        .hidden {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        }
+    &__submit {
+        background-color: #38AEF0;
+        border: none;
+        color: $white-color;
+        float: right;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding:0 30px;
+    }
+}
+
+#message_image {
+    display:none;
+}
+
+
