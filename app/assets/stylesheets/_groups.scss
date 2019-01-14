@@ -1,3 +1,5 @@
+$color:#fff;
+
 .groups {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
@@ -6,11 +8,11 @@
     box-sizing: border-box;
     padding: 20px 0 40px;
         &__name {
-            color: #fff;
+            color: $color;
             font-size: 15px;
         }
         &__message {
-            color: #fff;
+            color: $color;
             font-size: 11px;
             margin-top: 5px;
         }

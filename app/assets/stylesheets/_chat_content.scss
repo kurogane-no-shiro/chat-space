@@ -1,3 +1,5 @@
+$color:#434a54;
+
 .messages {
     background-color: #FAFAFA;
     box-sizing: border-box;
@@ -13,10 +15,9 @@
          display: flex;
          font-size:16px;
          font-weight:bold;
-         color:#434a54;
+         color: $color;
 
           &__user-name {
-              // font-size:16px;
               font-weight:bold;
               display:inline-block;
             }
@@ -33,7 +34,7 @@
 
       &__content {
         font-size:14px;
-        color:#434a54;
+        color: $color;
         margin-bottom:10px;
         font-weight:normal;
       }

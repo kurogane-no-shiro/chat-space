@@ -1,18 +1,22 @@
+$color:#fff;
+$box-size:border-box;
+
+
 .form {
     background-color: #DDDDDD;
-    box-sizing: border-box;
+    box-sizing: $box-size;
     height: 90px;
     padding: 20px 50px 20px 40px;
     &__message {
         border: none;
-        box-sizing:border-box;
+        box-sizing:$box-size;
         float: left;
         height: 50px;
         padding: 0 10px;
         width: calc(100% - 150px);
     }
         &__mask {
-            background-color: #fff;
+            background-color: $color;
             float: left;
             height: 50px;
             padding-right: 10px;
@@ -20,19 +24,19 @@
                 font-size: 20px;
                 line-height: 50px;
             }
-                .hidden {
-                    display: inline-block;
-                    font: normal normal normal 14px/1 FontAwesome;
-                    font-size: inherit;
-                    text-rendering: auto;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                }
-            }
-  &__submit {
+        .hidden {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        }
+    &__submit {
         background-color: #38AEF0;
         border: none;
-        color: #fff;
+        color: $color;
         float: right;
         font-size: 16px;
         height: 50px;
