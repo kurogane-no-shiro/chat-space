@@ -1,14 +1,15 @@
 .wrapper
   .side-bar
     .side-header
-      .header__name = current_user.name
+      .header__name
+        = current_user.name
       %ul.header__lists
         %li.list
         = link_to "", "messages"
         = fa_icon 'edit'
         %li.list
         = link_to edit_user_path(current_user) do
-        = fa_icon 'cog', class: 'icon'
+          =fa_icon 'cog', class: 'icon'
 
     .groups
       .group
@@ -28,7 +29,7 @@
 
       .right-header
         .right-header__button
-        = link_to "Edit", "/messages"
+        = link_to "Edit", "/users/sign_in"
 
     .messages
       .message
