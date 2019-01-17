@@ -1,13 +1,11 @@
-.flash {
-  .motice {
+.notice {
   color:$white-color;
   text-align:center;
   background-color: $log_in_blue;
 }
 
-  .alert {
-    background-color: $log_out_orange;
-    color:$white-color;
-    text-align:center;
-  }
+.alert {
+  background-color: $log_out_orange;
+  color:$white-color;
+  text-align:center;
 }
