@@ -70,4 +70,5 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rubocop', require: false
 

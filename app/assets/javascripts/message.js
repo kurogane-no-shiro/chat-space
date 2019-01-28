@@ -1,6 +1,6 @@
-function messageHTML(message){
-  var show_image = (message.image) ? `<img src="${ message.image }" class="lower-message__image">` : ``;
-  var html = `
+function buildHTML(message){
+  var show_image = (message.image) ? `<img src="${ message.image }" class='lower-message__image'>` : ``;
+  var messageHtml = `
             <div class="message">
               <div class="upper-message">
                 <div class="upper-message__user.name">
@@ -19,13 +19,12 @@ function messageHTML(message){
               </div>
             </div>
             `
-  return html;
+  return messageHtml;
 }
 
 $(function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
-    e.stopPropagation();
     var url = $(this).attr('action');
     var formData = new FormData($(this).get(0));
     $.ajax({
@@ -38,15 +37,14 @@ $(function(){
       context:this
     })
     .done(function(data){
-      var html = messageHTML(data);
-      $('.messages').append(html);
+      var messageHtml = buildHTML(data);
+      $('.messages').append(messageHtml);
       $('.form__message').val('')
-      $('.form__submit').prop('disable', false);
-      $(this)[0].reset();
+      $(this).get(0).reset();
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     })
-    .fail(function(message){
-      $('.form_submit').prop('disabled', false);
+    .fail(function(data){
     })
+    return false;
   })
 });
