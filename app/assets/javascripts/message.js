@@ -17,7 +17,8 @@ function messageHTML(message){
                 ${ show_image }
                 </div>
               </div>
-            </div>`
+            </div>
+            `
   return html;
 }
 
@@ -38,14 +39,14 @@ $(function(){
     })
     .done(function(data){
       var html = messageHTML(data);
-        $('.messages').append(html);
-        $('.form__message').val('')
-        $('.form__submit').prop('disable', false);
-        $(this)[0].reset();
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
-        })
-    .fail(function(message){
-        $('.form_submit').prop('disabled', false);
-        })
+      $('.messages').append(html);
+      $('.form__message').val('')
+      $('.form__submit').prop('disable', false);
+      $(this)[0].reset();
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     })
-  });
+    .fail(function(message){
+      $('.form_submit').prop('disabled', false);
+    })
+  })
+});
