@@ -3,21 +3,21 @@ class MessagesController < ApplicationController
 
   def index
     @message = Message.new
-    @messages = @group.messages.includes(:user).order("created_at ASC")
+    @messages = @group.messages.includes(:user)
   end
 
   def create
     @message = @group.messages.new(message_params)
     if @message.save
-     respond_to do |format|
+      respond_to do |format|
       format.html {redirect_to group_messages_path(params[:group_id])}
       format.json
-    end
-  else
+      end
+    else
     flash[:note] = "メッセージを入力してください"
     redirect_to group_messages_path(params[:group_id])
+    end
   end
-end
 
   private
 
