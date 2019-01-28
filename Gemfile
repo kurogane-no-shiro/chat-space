@@ -38,19 +38,16 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-<<<<<<< Updated upstream
-=======
   gem 'devise'
   gem 'devise-i18n'
   gem 'rails-i18n'
   gem 'carrierwave'
   gem 'mini_magick'
->>>>>>> Stashed changes
   gem 'rspec-rails'
   gem 'factory_girl_rails', "~> 4.4.1"
   gem 'faker'
-   gem 'rails-controller-testing'
-
+  gem 'rails-controller-testing'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -73,4 +70,5 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'rubocop', require: false
 
