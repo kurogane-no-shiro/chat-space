@@ -1,5 +1,5 @@
 function buildHTML(message){
-  var show_image = (message.image) ? `<img src="${ message.image }" class='lower-message__image'>` : ``;
+  var show_image = (message.image) ? `<img src="${ message.image }" class="lower-message__image">` : '';
   var messageHtml = `
             <div class="message">
               <div class="upper-message">
@@ -21,7 +21,6 @@ function buildHTML(message){
             `
   return messageHtml;
 }
-
 $(function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -38,12 +37,13 @@ $(function(){
     })
     .done(function(data){
       var messageHtml = buildHTML(data);
-      $('.messages').append(messageHtml);
-      $('.form__message').val('')
-      $(this).get(0).reset();
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+        $('.messages').append(messageHtml);
+        $('.form__message').val('')
+        $(this).get(0).reset();
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function(data){
+      alert("メッセージの投稿に失敗しました")
     })
     return false;
   })
