@@ -38,10 +38,10 @@ $(function(){
     })
     .done(function(data){
       var html = messageHTML(data);
-      $('.messages').append(html);
-      $('.form__message').val('')
-      $('.form__submit').prop('disable', false);
-      $(this)[0].reset();
+        $('.messages').append(html);
+        $('.form__message').val('')
+        $('.form__submit').prop('disable', false);
+        $(this)[0].reset();
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
         })
     .fail(function(message){
