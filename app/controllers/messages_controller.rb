@@ -19,6 +19,7 @@ class MessagesController < ApplicationController
     end
   end
 
+
   private
 
   def message_params
