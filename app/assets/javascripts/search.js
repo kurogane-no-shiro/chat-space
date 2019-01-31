@@ -32,7 +32,6 @@ function appendMessageHtml(user){
       $("#user-search-result").empty();
       if (user.length !== 0) {
         user.forEach(function(user) {
-          console.log(user)
           appendMessageHtml(user);
         });
       }
