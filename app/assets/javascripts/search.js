@@ -1,7 +1,7 @@
 $(function(){
 
 var add_members = $("#user-search-result");
-function appendMessageHtml(user){
+function appenduserSearchResultHTML(user){
     var Html = `
                 <div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${ user.name }</p>
@@ -10,7 +10,7 @@ function appendMessageHtml(user){
     add_members.append(Html);
 }
 
-  function appendNoMessageHtml(user){
+  function appendNouserSearchResultHTML(user){
       var Html = `
                   <div class="chat-group-user clearfix">
                     <p class="chat-group-user__name">ユーザー名</p>
@@ -32,11 +32,11 @@ function appendMessageHtml(user){
       $("#user-search-result").empty();
       if (user.length !== 0) {
         user.forEach(function(user) {
-          appendMessageHtml(user);
+          appenduserSearchResultHTML(user);
         });
       }
       else {
-        appendNoMessageHtml("メンバーがいません");
+        appendNouserSearchResultHTML("メンバーがいません");
       }
     })
     .fail(function(){
