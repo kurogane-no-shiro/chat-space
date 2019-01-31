@@ -7,13 +7,6 @@ class GroupsController < ApplicationController
     @group.users << current_user
   end
 
-  def search
-    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
-    respond_to do |format|
-      format.html
-      format.json
-    end
-  end
 
   def create
     @group = Group.new(group_params)
