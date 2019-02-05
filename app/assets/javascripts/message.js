@@ -23,7 +23,7 @@ $(document).on('turbolinks:load', function() {
     return messageHtml;
   }
   $(function(){
-    function buildMESSAGE(message) {
+    function buildMessage(message) {
       var show_image = (message.image) ? `<img src="${ message.image }" class="lower-message__image">` : '';
       var messages = $('.messages').append(
               `
@@ -50,12 +50,7 @@ $(document).on('turbolinks:load', function() {
       setInterval(update, 5000);
     });
     function update(){
-      if($('.message')[0]){
-      var message_id = $('.message:last').data("id");
-      } else {
-      var message_id = 0
-      }
-
+      var message_id = ($('.message')[0]) ? $('.message:last').data("id") : 0 ;
       $.ajax({
         url: location.href,
         type: 'GET',
@@ -64,9 +59,14 @@ $(document).on('turbolinks:load', function() {
       })
       .always(function(data){
         $.each(data, function(i,data) {
-          buildMESSAGE(data);
+          buildMessage(data);
+          console.log(data);
           });
-        });
+        })
+      .fail(function(data){
+        alert("メッセージの投稿に失敗しました")
+      })
+      return false;
       }
     });
   $(function(){
