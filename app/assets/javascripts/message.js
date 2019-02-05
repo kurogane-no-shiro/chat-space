@@ -60,7 +60,6 @@ $(document).on('turbolinks:load', function() {
       .always(function(data){
         $.each(data, function(i,data) {
           buildMessage(data);
-          console.log(data);
           });
         })
       .fail(function(data){
