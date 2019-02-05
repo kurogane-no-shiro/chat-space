@@ -65,7 +65,6 @@ $(document).on('turbolinks:load', function() {
       .always(function(data){
         $.each(data, function(i,data) {
           buildMESSAGE(data);
-          console.log(data);
           });
         });
       }
