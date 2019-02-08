@@ -62,10 +62,10 @@ $(document).on('turbolinks:load', function() {
           buildMessage(data);
           });
         })
-      .fail(function(data){
-        alert("メッセージの投稿に失敗しました")
-      })
-      return false;
+      // .fail(function(data){
+      //   alert("メッセージの投稿に失敗しました")
+      // })
+      // return false;
       }
     });
   $(function(){
