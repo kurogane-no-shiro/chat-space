@@ -72,3 +72,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'rubocop', require: false
 
+group :production do
+  gem 'unicorn'
+end
